@@ -21,7 +21,8 @@ function Table() {
   };
 
   const sortArray = (header) => {
-    setRows(arraySort([...rows], header));
+    let sortedRows = arraySort([...rows], header);
+    makeChunks(sortedRows);
   };
 
   const makeChunks = (rows) => {
